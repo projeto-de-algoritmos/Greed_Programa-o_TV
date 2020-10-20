@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "react"
+  ],
 	"env": {
 		"browser": true,
 		"es6": true,
@@ -7,6 +10,7 @@
 	},
 	"extends": [
 		"eslint:recommended",
+    "plugin:react/recommended"
 	],
 	"globals": {
 		"Atomics": "readonly",
@@ -15,6 +19,9 @@
 	"parserOptions": {
 		"ecmaVersion": 2018,
 		"sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
 	},
 	"rules": {
 		"brace-style": ["error", "1tbs"],

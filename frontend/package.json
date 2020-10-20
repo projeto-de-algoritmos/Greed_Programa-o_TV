@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-icons": "^3.11.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
@@ -32,6 +33,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.11.0"
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.21.5"
   }
 }
