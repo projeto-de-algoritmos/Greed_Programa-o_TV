@@ -10,6 +10,7 @@ function greed(program){
 	})
 	console.log(result)
 	console.log(sortedPrograms)
+	return(result)
 }
 
 function comparison(a, b){

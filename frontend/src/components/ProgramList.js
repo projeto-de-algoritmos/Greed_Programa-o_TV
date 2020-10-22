@@ -23,7 +23,8 @@ const ProgramList = ({ programs, removeProgram, updateProgram }) => {
 
   return programs.map((program, index) => (
     <div
-      className={program.isComplete ? 'program-row complete' : 'program-row'}
+			style={{marginLeft: 'auto', marginRight: 'auto'}}
+      className={'program-row'}
       key={program.id}
     >
       <div style={{display: 'flex', justifyContent: 'space-between', flex: '5', marginRight: '30px'}}key={program.id}>
