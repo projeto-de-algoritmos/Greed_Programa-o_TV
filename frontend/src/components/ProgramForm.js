@@ -14,6 +14,11 @@ function ProgramForm(props) {
   const handleSubmit = e => {
     e.preventDefault();
 
+    if(date === '' || duration === '' || time === '')
+      return;
+    console.log("####################### ", time)
+    if(time.length < 2)
+      time = '0' + time;
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       date: date,
@@ -29,16 +34,19 @@ function ProgramForm(props) {
 			<div style={{display: 'flex'}}>
 				<input
 					type='date'
+          required
 					value={date}
 					onChange={(e) => setDate(e.target.value)}
 					name='date'
 					className='program-input'
 					ref={inputRef}
 					style={{marginRigth: '200px'}}
+          
 				/>
 				<input
 					label='Hora limite'
 					type='time'
+          required
 					value={time}
 					onChange={(e) => setTime(e.target.value)}
 					name='text'
@@ -49,6 +57,7 @@ function ProgramForm(props) {
 					placeholder='Duração do programa'
 					type='number'
 					min='0'
+          required
 					value={duration}
 					onChange={(e) => setDuration(e.target.value)}
 					name='duration'
