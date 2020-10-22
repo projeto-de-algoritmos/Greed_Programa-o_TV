@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProgramForm from './ProgramForm';
 import ProgramList from './ProgramList';
+import greed from '../util/greedAlgorithm'
 
 function Programmation() {
   const [programs, setProgramLists] = useState([]);
@@ -21,6 +22,15 @@ function Programmation() {
 
     setProgramLists(removedArr);
   };
+	const calcButton = () => {
+		if(programs.length !== 0)
+			return(
+				<button className='program-button' onClick={() => greed(programs)}>
+					Calcular programação
+				</button>
+			);
+		return(null);
+	}
 
   return (
     <>
@@ -31,6 +41,7 @@ function Programmation() {
         removeProgram={removeProgram}
         updateProgram={updateProgram}
       />
+			{calcButton()}
     </>
   );
 }
