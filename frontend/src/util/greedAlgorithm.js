@@ -6,7 +6,7 @@ function greed(program){
 		let startDate = new Date(baseDate);
 		baseDate.setMinutes(baseDate.getMinutes() + parseInt(item.duration))
 		let endDate = new Date(baseDate);
-		result[index] = {start: startDate, end: endDate, id: item.id};
+		result[index] = {start: startDate, end: endDate, id: item.id, name: item.name};
 	})
 	console.log(result)
 	console.log(sortedPrograms)

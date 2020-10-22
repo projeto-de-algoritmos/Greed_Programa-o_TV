@@ -23,14 +23,14 @@ const ResultList = ({ programmation, dayFilter, monthFilter, yearFilter}) => {
 		if(item.start.getDate() == dayFilter && item.start.getMonth() + 1 == monthFilter && item.start.getFullYear() == yearFilter)
 
       if(item.start.getDate() == item.end.getDate() && item.start.getMonth() == item.end.getMonth())
-        result = [...result, `${startHour}:${startMinute} ~ ${endHour}:${endMinutes}`]
+        result = [...result, `${startHour}:${startMinute} | ${endHour}:${endMinutes} - ${item.name}`]
       else
-        result = [...result, `${startHour}:${startMinute} ~ 23:59`]
+        result = [...result, `${startHour}:${startMinute} | 23:59 - ${item.name}`]
 
 		else if(item.end.getDate() == dayFilter && item.end.getMonth() + 1 == monthFilter && item.end.getFullYear() == yearFilter)
-			result = [...result, `00:00 ~ ${endHour}:${endMinutes}`]
+			result = [...result, `00:00 | ${endHour}:${endMinutes} - ${item.name}`]
     else if(item.end.getDate() > dayFilter && item.start.getDate() < dayFilter)
-      result = [...result, `00:00 ~ 23:59`]
+      result = [...result, `00:00 | 23:59 - ${item.name}`]
 
 	})
 	console.log('result', result)

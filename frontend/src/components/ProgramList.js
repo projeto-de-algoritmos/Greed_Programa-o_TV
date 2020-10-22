@@ -28,6 +28,11 @@ const ProgramList = ({ programs, removeProgram, updateProgram }) => {
       key={program.id}
     >
       <div style={{display: 'flex', justifyContent: 'space-between', flex: '5', marginRight: '30px'}}key={program.id}>
+        <div>
+          {program.name}
+        </div>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'space-between', flex: '5', marginRight: '30px'}}key={program.id}>
 				<div>
 					{`${program.date.split('-')[2]}/${program.date.split('-')[1]}/${program.date.split('-')[0]}`}
 				</div>
@@ -44,7 +49,7 @@ const ProgramList = ({ programs, removeProgram, updateProgram }) => {
           className='delete-icon'
         />
         <TiEdit
-          onClick={() => setEdit({ id: program.id, value: {date: program.date, time: program.time, duration: program.duration} })}
+          onClick={() => setEdit({ id: program.id, value: {date: program.date, time: program.time, duration: program.duration, name: program.name} })}
           className='edit-icon' style={{flex: 1}}
         />
       </div>
