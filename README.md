@@ -15,7 +15,9 @@ algorítimo ambicioso, scheduling to minimize lateness.
 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![Página em branco](./Tutorial/Images/Screenshot1.jpeg)
+![Página 2](./Tutorial/Images/Screenshot2.jpeg)
+![Página 3](./Tutorial/Images/Screenshot3.jpeg)
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
@@ -39,11 +41,12 @@ são: nome do programa, data e horario em que ele expira (deadline), e sua dura�
 Tendo o cadastro ocorrido é necessária a seleção de um dia para a ver a programação.
 Toda a programação começa no dia atual em que se está sendo criada a programação e se estende
 até ter consumido todos os programas cadastrados, ou seja, vai do dia e horario atual até a soma
-das durações do programa.
+das durações do programa. Também pode ser acessado um [Video Explicativo](./Tutorial/Videos/VID-20201023-WA0026.mp4).
 
 
 ## Outros 
 O algorítimo utilizado é o Scheduling to minimize lateness.
+
 
 
 
